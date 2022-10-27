@@ -56,25 +56,26 @@
         padding-left: 25px;
         padding-bottom: 10px; }
     .wrapper .container .listWrap {
-      flex: 1;
       width: 100%;
+      flex: 1;
       background: #ffffff;
       border-top: 2px solid #006dd3;
-      border-bottom: 2px solid #006dd3;
-      overflow-x: auto; }
+      border-bottom: 2px solid #006dd3; }
       .wrapper .container .listWrap li {
-        padding: 10px;
+        width: 100%;
         font-size: 24px;
         font-family: "Arial";
         font-weight: 400;
         letter-spacing: 2px;
         line-height: 18px;
         color: #232323;
-        display: flex; }
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto; }
         .wrapper .container .listWrap li input[type="checkbox"] {
           width: 24px;
           height: 24px;
-          margin-right: 15px;
+          margin: 10px;
           background-color: white;
           border-radius: 50%;
           vertical-align: middle;
@@ -87,18 +88,24 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-color: rgba(136, 198, 248, 0.659); }
-      .wrapper .container .listWrap label {
-        flex-grow: 1; }
-      .wrapper .container .listWrap .trash {
-        margin-right: 10px;
-        width: 24px;
-        height: 24px;
-        background: url(../img/logo/trash.svg);
-        background-repeat: no-repeat;
-        background-size: cover; }
-        .wrapper .container .listWrap .trash:hover {
-          zoom: 1.2;
-          filter: invert(11%) sepia(86%) saturate(7499%) hue-rotate(10deg) brightness(92%) contrast(116%); }
+        .wrapper .container .listWrap li label {
+          flex-grow: 1; }
+        .wrapper .container .listWrap li .trash {
+          margin-right: 10px;
+          align-self: center;
+          width: 24px;
+          height: 24px;
+          background: url(../img/logo/trash.svg);
+          background-repeat: no-repeat;
+          background-size: cover; }
+          .wrapper .container .listWrap li .trash:hover {
+            zoom: 1.2;
+            filter: invert(11%) sepia(86%) saturate(7499%) hue-rotate(10deg) brightness(92%) contrast(116%); }
+      @media (max-width: 576px) {
+        .wrapper .container .listWrap li {
+          flex-direction: column;
+          align-content: flex-start;
+          border-bottom: 1px solid #006dd3; } }
     .wrapper .container .todoForm {
       margin: 10% 0;
       display: flex;

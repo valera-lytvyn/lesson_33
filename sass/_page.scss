@@ -63,22 +63,24 @@
       }
 
       .listWrap {
-         flex: 1;
          width: 100%;
+         flex: 1;
          background: #ffffff;
          border-top: 2px solid rgb(0, 109, 211);
          border-bottom: 2px solid rgb(0, 109, 211);
-         overflow-x: auto;
 
          li {
-            padding: 10px;
+            width: 100%;
             @include font(24px, $ff, 400, 2px, 18px, $color_23);
             display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+
 
             input[type="checkbox"] {
                width: 24px;
                height: 24px;
-               margin-right: 15px;
+               margin: 10px;
                background-color: white;
                border-radius: 50%;
                vertical-align: middle;
@@ -95,37 +97,46 @@
                }
             }
 
+
+
+            label {
+               flex-grow: 1;
+            }
+
+            .trash {
+               margin-right: 10px;
+               align-self: center;
+               width: 24px;
+               height: 24px;
+               background: url(../img/logo/trash.svg);
+               background-repeat: no-repeat;
+               background-size: cover;
+
+               &:hover {
+                  zoom: 1.2;
+                  filter: invert(11%) sepia(86%) saturate(7499%) hue-rotate(10deg) brightness(92%) contrast(116%);
+               }
+            }
          }
 
-         label {
-            flex-grow: 1;
-
-         }
-
-         .trash {
-            margin-right: 10px;
-            width: 24px;
-            height: 24px;
-            background: url(../img/logo/trash.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            &:hover {
-               zoom: 1.2;
-               filter: invert(11%) sepia(86%) saturate(7499%) hue-rotate(10deg) brightness(92%) contrast(116%);
+         @media (max-width:576px) {
+            li {
+               flex-direction: column;
+               align-content: flex-start;
+               border-bottom: 1px solid rgb(0, 109, 211);
             }
          }
 
       }
 
       .todoForm {
-          margin: 10% 0;
+         margin: 10% 0;
          display: flex;
          justify-content: space-around;
-        
+
          .todoAdd {
 
-          
+
             width: 50px;
             height: 50px;
             background: url(../img/logo/add.png);
@@ -147,7 +158,7 @@
          }
 
          .todoText {
-        
+
             border-radius: 5px;
             @include font(22px, $ff, 400, 2px, 50px, $color_23);
             padding-left: 15px;
@@ -158,16 +169,17 @@
 
             }
          }
+
          @media (max-width:400px) {
             .todoText {
                max-width: 200px;
-               
+
             }
 
 
-      }
+         }
 
-      
+
       }
    }
 }
