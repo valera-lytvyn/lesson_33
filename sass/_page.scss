@@ -68,6 +68,7 @@
          background: #ffffff;
          border-top: 2px solid rgb(0, 109, 211);
          border-bottom: 2px solid rgb(0, 109, 211);
+         overflow-x: auto;
 
          li {
             padding: 10px;
@@ -118,12 +119,13 @@
       }
 
       .todoForm {
+          margin: 10% 0;
          display: flex;
          justify-content: space-around;
-         width: 100%;
-         padding: 25px;
-
+        
          .todoAdd {
+
+          
             width: 50px;
             height: 50px;
             background: url(../img/logo/add.png);
@@ -145,6 +147,7 @@
          }
 
          .todoText {
+        
             border-radius: 5px;
             @include font(22px, $ff, 400, 2px, 50px, $color_23);
             padding-left: 15px;
@@ -155,6 +158,16 @@
 
             }
          }
+         @media (max-width:400px) {
+            .todoText {
+               max-width: 200px;
+               
+            }
+
+
+      }
+
+      
       }
    }
 }

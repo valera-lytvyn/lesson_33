@@ -60,7 +60,8 @@
       width: 100%;
       background: #ffffff;
       border-top: 2px solid #006dd3;
-      border-bottom: 2px solid #006dd3; }
+      border-bottom: 2px solid #006dd3;
+      overflow-x: auto; }
       .wrapper .container .listWrap li {
         padding: 10px;
         font-size: 24px;
@@ -99,10 +100,9 @@
           zoom: 1.2;
           filter: invert(11%) sepia(86%) saturate(7499%) hue-rotate(10deg) brightness(92%) contrast(116%); }
     .wrapper .container .todoForm {
+      margin: 10% 0;
       display: flex;
-      justify-content: space-around;
-      width: 100%;
-      padding: 25px; }
+      justify-content: space-around; }
       .wrapper .container .todoForm .todoAdd {
         width: 50px;
         height: 50px;
@@ -134,3 +134,6 @@
           letter-spacing: 2px;
           line-height: 50px;
           color: #232323; }
+      @media (max-width: 400px) {
+        .wrapper .container .todoForm .todoText {
+          max-width: 200px; } }
