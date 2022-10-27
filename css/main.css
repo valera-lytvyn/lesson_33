@@ -1,0 +1,133 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 22px;
+  color: #232323; }
+  .wrapper .container {
+    height: 100%;
+    width: 100%;
+    background: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .wrapper .container .wrap {
+      border: 2px solid #0d4c88;
+      height: 80%;
+      min-width: 500px;
+      border-radius: 5%;
+      background-color: rgba(136, 198, 248, 0.659);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .wrapper .container .wrap .head {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top-left-radius: 15%;
+        border-top-right-radius: 15%; }
+        .wrapper .container .wrap .head .titleWrap {
+          width: 100%;
+          padding: 25px;
+          display: flex;
+          justify-content: space-between; }
+          .wrapper .container .wrap .head .titleWrap .clean {
+            width: 50px;
+            height: 50px;
+            background: url(../img/logo/refresh.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(233deg) brightness(105%) contrast(100%); }
+            .wrapper .container .wrap .head .titleWrap .clean:hover {
+              rotate: 90deg;
+              filter: invert(22%) sepia(91%) saturate(1126%) hue-rotate(187deg) brightness(91%) contrast(97%); }
+        .wrapper .container .wrap .head #clock {
+          display: flex;
+          align-self: flex-start;
+          padding-left: 25px;
+          padding-bottom: 10px; }
+      .wrapper .container .wrap .listWrap {
+        flex: 1;
+        width: 100%;
+        background: #ffffff;
+        border-top: 2px solid #006dd3;
+        border-bottom: 2px solid #006dd3; }
+        .wrapper .container .wrap .listWrap li {
+          padding: 10px;
+          font-size: 24px;
+          font-family: "Arial";
+          font-weight: 400;
+          letter-spacing: 2px;
+          line-height: 18px;
+          color: #232323;
+          display: flex; }
+          .wrapper .container .wrap .listWrap li input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            background-color: white;
+            border-radius: 50%;
+            vertical-align: middle;
+            border: 1px solid black;
+            appearance: none;
+            outline: none;
+            cursor: pointer; }
+            .wrapper .container .wrap .listWrap li input[type="checkbox"]:checked {
+              background: url(../img/logo/check.svg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-color: rgba(136, 198, 248, 0.659); }
+        .wrapper .container .wrap .listWrap label {
+          flex-grow: 1; }
+        .wrapper .container .wrap .listWrap .trash {
+          margin-right: 10px;
+          width: 24px;
+          height: 24px;
+          background: url(../img/logo/trash.svg);
+          background-repeat: no-repeat;
+          background-size: cover; }
+          .wrapper .container .wrap .listWrap .trash:hover {
+            zoom: 1.2;
+            filter: invert(11%) sepia(86%) saturate(7499%) hue-rotate(10deg) brightness(92%) contrast(116%); }
+      .wrapper .container .wrap .todoForm {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 25px; }
+        .wrapper .container .wrap .todoForm .todoAdd {
+          width: 50px;
+          height: 50px;
+          background: url(../img/logo/add.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          margin-right: 20px;
+          filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(233deg) brightness(105%) contrast(100%); }
+          .wrapper .container .wrap .todoForm .todoAdd:hover {
+            filter: invert(22%) sepia(91%) saturate(1126%) hue-rotate(187deg) brightness(91%) contrast(97%); }
+        .wrapper .container .wrap .todoForm .buttonSubmit {
+          opacity: 0;
+          width: 100%;
+          height: 100%; }
+        .wrapper .container .wrap .todoForm .todoText {
+          border-radius: 5px;
+          font-size: 22px;
+          font-family: "Arial";
+          font-weight: 400;
+          letter-spacing: 2px;
+          line-height: 50px;
+          color: #232323;
+          padding-left: 15px; }
+          .wrapper .container .wrap .todoForm .todoText:placeholder-shown {
+            text-indent: 15px;
+            font-size: 22px;
+            font-family: "Arial";
+            font-weight: 400;
+            letter-spacing: 2px;
+            line-height: 50px;
+            color: #232323; }
